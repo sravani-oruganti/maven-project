@@ -3,11 +3,11 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example.maven-project</groupId>
-  <artifactId>maven-project</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>Maven Project</name>
+  <groupIdcom.ak</groupId>
+  <artifactId>maven-web-application/artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Maven-web-application </name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://13.235.81.149:8081/repository/sample-snapshot/</url>
 
@@ -23,11 +23,18 @@
   </modules>
 
   <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>http://13.235.81.149:8081/repository/sample-releases/</url>
-    </site>
+    <repository>
+      <id>nexus</id>
+      <name>Releases nexus repository</name>
+      <url>/</url>
+    </repository>
+
+<snapshotRepository>
+<id>nexus</id>
+ <nameSnapshot nexus repository </name>
+<url></url>
+</snapshotRepository>
+           
   </distributionManagement>
 
   <build>
